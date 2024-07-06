@@ -1,0 +1,1 @@
+ft ../data/pos_02_in.txt ./out_prog.txt Ko

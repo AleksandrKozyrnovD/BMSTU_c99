@@ -1,0 +1,2 @@
+a ./func_tests/data/mtr/1x1_1.txt ./func_tests/data/mtr/1x1_2.txt ./out/out_prog.txt 
+

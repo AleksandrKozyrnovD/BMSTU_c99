@@ -1,0 +1,10 @@
+1 a
+2 bb
+4 d
+3 cc
+3 c
+4 dd
+5 e
+5 ee
+2 b
+1 aa

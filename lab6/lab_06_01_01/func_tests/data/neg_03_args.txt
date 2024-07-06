@@ -1,0 +1,2 @@
+./func_tests/data/neg_03_in.txt director konstantin
+

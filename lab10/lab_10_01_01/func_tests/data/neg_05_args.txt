@@ -1,0 +1,1 @@
+p func_tests/data/neg_05_in.txt out/out_prog.txt

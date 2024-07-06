@@ -1,0 +1,1 @@
+a ./func_tests/data/mtr/3x3_neg.txt ./func_tests/data/mtr/nek1.txt ./out/out_prog.txt 

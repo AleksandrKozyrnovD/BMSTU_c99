@@ -1,0 +1,1 @@
+a ./func_tests/data/mtr/2x2.txt ./func_tests/data/mtr/2x2.txt ./out/out_prog.txt --test --abcd

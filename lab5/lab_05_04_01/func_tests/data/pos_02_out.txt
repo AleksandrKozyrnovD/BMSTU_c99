@@ -1,0 +1,9 @@
+Kozyrnov
+Aleksey
+5 5 5 5 
+Kondov
+Kalpak
+4 5 1 2 
+Kondov
+aleksandr
+5 4 2 1 

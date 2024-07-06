@@ -1,0 +1,60 @@
+reset
+
+# set boxwidth 1 absolute
+
+NO_ANIMATION = 1
+
+set xlabel "Sizes"
+set ylabel "Average, microsec"
+
+
+set key left top
+set bars 0.5
+set grid
+
+#data columns: x min 1quartile median 3quartile max
+set terminal svg size 1080, 720
+set output "incr_versus_vla.svg"
+plot "mysortvla_incr.txt" using 1:2 with linespoints title "mysortvla incr", \
+    "mysortvla_sincr.txt" using 1:2 with linespoints title "mysortvla struct incr"
+
+set output "incr_versus_swap.svg"
+plot "mysortswap_incr.txt" using 1:2 with linespoints title "mysortswap incr", \
+    "mysortswap_sincr.txt" using 1:2 with linespoints title "mysortswap struct incr"
+
+set output "incr_versus_qsort.svg"
+plot "qsort_incr.txt" using 1:2 with linespoints title "qsort incr", \
+    "qsort_sincr.txt" using 1:2 with linespoints title "qsort struct incr"
+
+
+
+set output "decr_versus_vla.svg"
+plot "mysortvla_decr.txt" using 1:2 with linespoints title "mysortvla decr", \
+    "mysortvla_sdecr.txt" using 1:2 with linespoints title "mysortvla struct decr"
+
+set output "decr_versus_swap.svg"
+plot "mysortswap_decr.txt" using 1:2 with linespoints title "mysortswap decr", \
+    "mysortswap_sdecr.txt" using 1:2 with linespoints title "mysortswap struct decr"
+
+set output "decr_versus_qsort.svg"
+plot "qsort_decr.txt" using 1:2 with linespoints title "qsort decr", \
+    "qsort_sdecr.txt" using 1:2 with linespoints title "qsort struct decr"
+
+
+
+set output "rand_versus_vla.svg"
+plot "mysortvla_rand.txt" using 1:2 with linespoints title "mysortvla rand", \
+    "mysortvla_srand.txt" using 1:2 with linespoints title "mysortvla struct rand"
+
+set output "rand_versus_swap.svg"
+plot "mysortswap_rand.txt" using 1:2 with linespoints title "mysortswap rand", \
+    "mysortswap_srand.txt" using 1:2 with linespoints title "mysortswap struct rand"
+
+set output "rand_versus_qsort.svg"
+plot "qsort_rand.txt" using 1:2 with linespoints title "qsort rand", \
+    "qsort_srand.txt" using 1:2 with linespoints title "qsort struct rand"
+
+
+
+
+

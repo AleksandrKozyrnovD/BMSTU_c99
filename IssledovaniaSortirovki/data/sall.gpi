@@ -1,0 +1,28 @@
+reset
+
+# set boxwidth 1 absolute
+
+NO_ANIMATION = 1
+
+set xlabel "Sizes"
+set ylabel "Average, microsec"
+
+set key left top
+set bars 0.5
+set grid
+
+#data columns: x min 1quartile median 3quartile max
+set terminal svg size 1080, 720
+set output "sall.svg"
+plot "mysortvla_sdecr.txt" using 1:2 with lines title "mysortvla struct decr", \
+    "qsort_sdecr.txt" using 1:2 with lines title "qsort struct incr", \
+    "mysortvla_sincr.txt" using 1:2 with lines title "mysortvla struct incr", \
+    "qsort_sincr.txt" using 1:2 with lines title "qsort struct incr", \
+    "mysortvla_srand.txt" using 1:2 with lines title "mysortvla struct rand", \
+    "qsort_srand.txt" using 1:2 with lines title "qsort struct rand"
+
+
+set output "sall_swap.svg"
+replot "mysortswap_sdecr.txt" using 1:2 with lines title "mysortswap struct decr", \
+    "mysortswap_sincr.txt" using 1:2 with lines title "mysortswap struct incr", \
+    "mysortswap_srand.txt" using 1:2 with lines title "mysortswap struct rand", \

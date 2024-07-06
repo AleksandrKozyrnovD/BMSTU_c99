@@ -1,0 +1,1 @@
+p func_tests/data/bbbb_01_in.txt out/out_prog.txt

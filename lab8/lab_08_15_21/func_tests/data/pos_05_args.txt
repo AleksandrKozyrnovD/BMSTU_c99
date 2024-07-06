@@ -1,0 +1,2 @@
+a ./func_tests/data/mtr/3x3_zero.txt ./func_tests/data/mtr/3x3_zero.txt ./out/out_prog.txt 
+

@@ -1,0 +1,18 @@
+reset
+
+# set boxwidth 1 absolute
+
+NO_ANIMATION = 1
+
+set xlabel "Sizes"
+set ylabel "Average, microsec"
+
+set key left top
+set bars 0.5
+set grid
+
+#data columns: x min 1quartile median 3quartile max
+set terminal svg size 1080, 720
+set output "all.svg"
+plot "mysortvla_incr.txt" using 1:2 with lines title "mysortvla | incr", "mysortvla_decr.txt" using 1:2 with lines title "mysortvla | decr", "mysortvla_rand.txt" using 1:2 with lines title "mysortvla | rand", "qsort_incr.txt" using 1:2 with lines title "qsort | incr", "qsort_decr.txt" using 1:2 with lines title "qsort | decr", "qsort_rand.txt" using 1:2 with lines title "qsort | rand", "mysortswap_incr.txt" using 1:2 with lines title "mysortswap | incr", "mysortswap_decr.txt" using 1:2 with lines title "mysortswap | decr", "mysortswap_rand.txt" using 1:2 with lines title "mysowrtswap | rand",
+
